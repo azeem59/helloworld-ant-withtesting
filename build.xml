@@ -12,6 +12,7 @@
         <delete dir="${build.dir}" />
         <delete dir="${docs.dir}" />
         <delete dir="${dist.dir}" />
+        <delete dir="${src.dir}" />
     </target>
 
     <!-- Creates the  build, docs and dist directory-->
@@ -19,6 +20,7 @@
         <mkdir dir="${build.dir}" />
         <mkdir dir="${docs.dir}" />
         <mkdir dir="${dist.dir}" />
+        <mkdir dir="${src.dir}" />
     </target>
 
     <!-- Compiles the java code (including the usage of library for JUnit -->
