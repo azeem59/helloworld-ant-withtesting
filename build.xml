@@ -1,10 +1,6 @@
 <?xml version="1.0"?>
- 
 <project name="Ant-Test" default="main" basedir=".">
     <!-- Sets variables which can later be used. -->
-     <presetdef name="javac">
-    <javac includeantruntime="false" />
-  </presetdef>
     <!-- The value of a property is accessed via ${} -->
     <property name="src.dir" location="src" />
 
@@ -44,12 +40,12 @@
     <!-- Run the JUnit Tests -->
     <!-- Output is XML, could also be plain-->
     <target name="junit" depends="compile">
-        <junit printsummary="on" fork="true" haltonfailure="yes">
+        <junit printsummary="on" fork="true">
             <classpath refid="junit.class.path" />
             <formatter type="xml" />
-            <batchtest todir="testreport">
+            <batchtest todir="${test.report.dir}">
                 <fileset dir="${src.dir}">
-                    <include name="**/*Test*.java" />
+                    <include name="MyMathTest.java" />
                 </fileset>
             </batchtest>
         </junit>
