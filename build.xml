@@ -5,12 +5,12 @@
     <property name="src.dir" location="src" />
     <property name="build.dir" location="bin" />
     <property name="dist.dir" location="dist" />
-    <property name="docs.dir" location="docs" />
+    
 
     <!-- Deletes the existing build, docs and dist directory-->
     <target name="clean">
         <delete dir="${build.dir}" />
-        <delete dir="${docs.dir}" />
+        
         <delete dir="${dist.dir}" />
         <delete dir="${src.dir}" />
     </target>
@@ -18,7 +18,7 @@
     <!-- Creates the  build, docs and dist directory-->
     <target name="makedir">
         <mkdir dir="${build.dir}" />
-        <mkdir dir="${docs.dir}" />
+       
         <mkdir dir="${dist.dir}" />
         <mkdir dir="${src.dir}" />
     </target>
@@ -30,7 +30,7 @@
 
     </target>
 
-   
+    
 
     <!--Creates the deployable jar file  -->
     <target name="jar" depends="compile">
@@ -41,7 +41,7 @@
         </jar>
     </target>
 
-    <target name="main" depends="compile, jar, docs">
+    <target name="main" depends="compile, jar">
         <description>Main target</description>
     </target>
 
