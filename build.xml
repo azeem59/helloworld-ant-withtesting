@@ -1,4 +1,7 @@
 <?xml version="1.0"?>
+  <presetdef name="javac">
+    <javac includeantruntime="false" />
+  </presetdef>
 <project name="Ant-Test" default="main" basedir=".">
     <!-- Sets variables which can later be used. -->
     <!-- The value of a property is accessed via ${} -->
